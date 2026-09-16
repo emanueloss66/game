@@ -1,0 +1,140 @@
+{
+  "idle": {
+    "file": "assets/sprites/luna/idle.png",
+    "frameWidth": 385,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "walk": {
+    "file": "assets/sprites/luna/walk.png",
+    "frameWidth": 352,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "crouch": {
+    "file": "assets/sprites/luna/crouch.png",
+    "frameWidth": 365,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "block": {
+    "file": "assets/sprites/luna/block.png",
+    "frameWidth": 367,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "ko": {
+    "file": "assets/sprites/luna/ko.png",
+    "frameWidth": 370,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "hit_horizontal": {
+    "file": "assets/sprites/luna/hit_horizontal.png",
+    "frameWidth": 323,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "hit_vertical": {
+    "file": "assets/sprites/luna/hit_vertical.png",
+    "frameWidth": 323,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "jump": {
+    "file": "assets/sprites/luna/jump.png",
+    "frameWidth": 463,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_horizontal": {
+    "file": "assets/sprites/luna/punch_horizontal.png",
+    "frameWidth": 417,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_vertical": {
+    "file": "assets/sprites/luna/punch_vertical.png",
+    "frameWidth": 369,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}

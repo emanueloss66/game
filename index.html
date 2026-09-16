@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LUVAS DE OURO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- TELA: MENU PRINCIPAL -->
+  <div id="screen-main" class="screen screen-framed">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_main.jpg')">
+      <h1 class="sr-only">Luvas de Ouro</h1>
+      <button class="art-hotspot" data-goto="nickname" style="left:33.98%; top:55.18%; width:31.91%; height:8.98%;" aria-label="Iniciar"></button>
+      <button class="art-hotspot" data-goto="options" style="left:33.98%; top:66.70%; width:31.91%; height:7.91%;" aria-label="Opções"></button>
+      <button class="art-hotspot" data-goto="about" style="left:33.98%; top:77.05%; width:31.91%; height:8.20%;" aria-label="Sobre"></button>
+    </div>
+  </div>
+
+  <!-- TELA: NICKNAME (aparece ao clicar em Iniciar, antes de escolher o modo) -->
+  <div id="screen-nickname" class="screen screen-framed hidden">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_nickname.jpg')">
+      <h2 class="sr-only">Digite seu nickname</h2>
+      <input type="text" id="nickname-input" class="nickname-input" maxlength="16" autocomplete="off" spellcheck="false" aria-label="Nickname" style="left:26.43%; top:42.38%; width:47.07%; height:9.96%;">
+      <button class="art-hotspot" id="btn-nickname-confirm" style="left:37.30%; top:57.32%; width:25.00%; height:7.13%;" aria-label="Confirmar"></button>
+      <p class="nickname-hint" id="nickname-hint"></p>
+    </div>
+  </div>
+
+  <!-- TELA: SELEÇÃO DE MODO -->
+  <div id="screen-mode" class="screen screen-framed hidden">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_mode.jpg')">
+      <h2 class="sr-only">Selecione o modo</h2>
+      <button class="mode-card art-hotspot" data-mode="historia" style="left:11.20%; top:35.74%; width:23.44%; height:36.52%;" aria-label="História"></button>
+      <button class="mode-card art-hotspot" data-mode="ia" style="left:35.68%; top:35.74%; width:25.52%; height:36.52%;" aria-label="Versus IA"></button>
+      <button class="mode-card art-hotspot" data-mode="vs" style="left:62.44%; top:35.74%; width:25.91%; height:36.52%;" aria-label="1 vs 1"></button>
+      <button class="art-hotspot" data-goto="main" style="left:28.32%; top:90.63%; width:9.44%; height:5.08%;" aria-label="Voltar"></button>
+    </div>
+  </div>
+
+  <!-- TELA: SELEÇÃO DE PERSONAGEM -->
+  <div id="screen-select" class="screen screen-framed hidden">
+    <div class="art-frame" id="select-art-frame" style="background-image:url('game/assets/ui/screens/bg_select_historia.jpg')">
+      <h2 class="sr-only">Selecione seu lutador</h2>
+      <div id="difficulty-picker" class="difficulty-picker hidden">
+        <span class="difficulty-label">DIFICULDADE DA IA:</span>
+        <button class="diff-btn" data-diff="facil">FÁCIL</button>
+        <button class="diff-btn" data-diff="normal">NORMAL</button>
+        <button class="diff-btn" data-diff="dificil">DIFÍCIL</button>
+      </div>
+      <div id="select-status" class="select-status"></div>
+      <div id="char-grid" class="char-grid"></div>
+      <button class="pixel-btn small" id="btn-random">ALEATÓRIO</button>
+      <button class="art-hotspot" data-goto="mode" style="left:28.32%; top:90.63%; width:9.44%; height:5.08%;" aria-label="Voltar"></button>
+    </div>
+  </div>
+
+  <!-- TELA: PRÓXIMO DESAFIANTE (modo história) -->
+  <div id="screen-vs" class="screen screen-framed hidden">
+    <div class="art-frame" id="vs-art-frame" style="background-image:url('game/assets/ui/screens/bg_vs.png')">
+      <h2 class="sr-only" id="vs-title">PRÓXIMA LUTA</h2>
+      <div class="vs-card" id="vs-card-p1"></div>
+      <div class="vs-card" id="vs-card-p2"></div>
+      <div class="story-narrative" id="story-narrative"></div>
+      <button class="pixel-btn vs-fight-btn" id="btn-fight">LUTAR!</button>
+    </div>
+  </div>
+
+  <!-- TELA: EPÍLOGO SECRETO (desbloqueado ao terminar o modo história com
+       os 6 lutadores) -->
+  <div id="screen-epilogue" class="screen hidden">
+    <div class="epilogue-terminal">
+      <div class="epilogue-header">ARQUIVO CONFIDENCIAL — ORDEM DA COROA</div>
+      <div class="epilogue-body" id="epilogue-body"></div>
+      <button class="pixel-btn small" data-goto="main">FECHAR</button>
+    </div>
+  </div>
+
+  <!-- TELA: BATALHA -->
+  <div id="screen-battle" class="screen hidden">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+
+    <div class="hud">
+      <div class="hud-side hud-left">
+        <div class="hud-name" id="p1-name">P1</div>
+        <div class="healthbar-wrap">
+          <img class="healthbar-frame" src="game/assets/ui/healthbar_frame.png">
+          <div class="healthbar-fill-wrap" id="p1-hp-wrap"><div class="healthbar-fill" id="p1-hp"></div></div>
+        </div>
+        <div class="round-pips" id="p1-pips"></div>
+      </div>
+
+      <div class="hud-side hud-right">
+        <div class="hud-name" id="p2-name">P2</div>
+        <div class="healthbar-wrap">
+          <img class="healthbar-frame" src="game/assets/ui/healthbar_frame.png">
+          <div class="healthbar-fill-wrap flip" id="p2-hp-wrap"><div class="healthbar-fill" id="p2-hp"></div></div>
+        </div>
+        <div class="round-pips" id="p2-pips"></div>
+      </div>
+    </div>
+
+    <!-- O timer agora é desenhado dentro do próprio canvas (ver drawTimer()
+         em main.js), para os lutadores poderem passar por cima dele quando
+         se aproximam do centro do ringue. -->
+
+    <div id="round-banner" class="round-banner hidden"></div>
+    <button id="btn-pause" class="pixel-btn tiny pause-btn">PAUSE</button>
+
+    <div id="pause-menu" class="overlay-menu hidden">
+      <h2>PAUSADO</h2>
+      <button class="pixel-btn" id="btn-resume">CONTINUAR</button>
+      <button class="pixel-btn" id="btn-quit">SAIR PARA O MENU</button>
+    </div>
+  </div>
+
+  <!-- TELA: RESULTADO -->
+  <div id="screen-results" class="screen screen-framed hidden">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_results.jpg')">
+      <h2 id="results-title" class="results-title"></h2>
+      <p id="results-desc" class="results-desc"></p>
+      <button class="pixel-btn results-btn" id="btn-rematch" style="left:36.20%; top:46.68%; width:27.54%; height:8.50%;">
+        <span id="btn-rematch-label">REVANCHE</span>
+      </button>
+      <button class="pixel-btn results-btn" data-goto="main" style="left:36.20%; top:59.08%; width:27.54%; height:8.30%;">MENU PRINCIPAL</button>
+    </div>
+  </div>
+
+  <!-- TELA: OPÇÕES -->
+  <div id="screen-options" class="screen screen-framed hidden">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_options.jpg')">
+      <h2 class="sr-only">Opções</h2>
+      <div class="panel-content">
+        <div class="options-list">
+          <label class="opt-row">
+            <span>Volume dos efeitos sonoros</span>
+            <input type="range" id="opt-volume" min="0" max="100" value="50">
+          </label>
+          <label class="opt-row">
+            <span>Duração do round (segundos)</span>
+            <input type="range" id="opt-time" min="30" max="99" value="60">
+            <span id="opt-time-val">60</span>
+          </label>
+        </div>
+        <div class="controls-help">
+          <h3>CONTROLES (clique numa tecla para trocar)</h3>
+          <div class="controls-grid" id="controls-grid">
+            <!-- gerado dinamicamente por main.js -->
+          </div>
+          <p class="rebind-hint" id="rebind-hint">Clique em uma tecla e pressione a nova tecla desejada.</p>
+          <button class="pixel-btn tiny" id="btn-reset-controls">RESTAURAR PADRÃO</button>
+        </div>
+      </div>
+      <button class="pixel-btn back-btn panel-back-btn" data-goto="main">VOLTAR</button>
+    </div>
+  </div>
+
+  <!-- TELA: SOBRE -->
+  <div id="screen-about" class="screen screen-framed hidden">
+    <div class="art-frame" style="background-image:url('game/assets/ui/screens/bg_about.jpg')">
+      <h2 class="sr-only">Sobre</h2>
+      <div class="panel-content">
+        <div class="about-box">
+          <p><strong>LUVAS DE OURO</strong> é um jogo de luta 2D em pixel art, desenvolvido para a <strong>4ª Semana Tecnológica</strong>, integrando o boxe a jogos retrô. Todas as artes são totalmente autorais, projetadas com auxílio de Inteligência Artificial.</p>
+
+          <p class="about-heading">EQUIPE</p>
+          <ul class="credits-list">
+            <li>Anabely Pantano</li>
+            <li>Eloisa Dalaqua Lazario</li>
+            <li>Emanuel Oss Frigotto</li>
+            <li>Lara Durães Vidal</li>
+            <li>Maria Eduarda Labres Dias</li>
+            <li>Ricardo da Luz Silva</li>
+            <li>Pyetro Henrique Lentz</li>
+            <li>Walter Luis de Bastiani</li>
+            <li>João Emanuel Barbosa de Oliveira</li>
+          </ul>
+
+          <p class="about-heading">TECNOLOGIAS UTILIZADAS</p>
+          <ul class="credits-list">
+            <li>HTML5 (estrutura) + Canvas (renderização do jogo)</li>
+            <li>CSS3 (interface e telas de menu)</li>
+            <li>JavaScript puro, sem frameworks (lógica do jogo)</li>
+            <li>Node.js (servidor local que hospeda o jogo e a API do ranking)</li>
+            <li>Banco de dados: <strong>SQLite</strong> (módulo nativo <code>node:sqlite</code> do Node.js, arquivo <code>ranking.db</code>), usado para guardar o placar dos jogadores de forma permanente, igual em qualquer computador que acesse o mesmo servidor</li>
+            <li>Aseprite (criação e exportação dos sprites dos lutadores)</li>
+          </ul>
+
+          <p>6 lutadores, cada um com seu estilo, disputam o título no ringue: <strong>Ryu, Thunder, Ivan, Luna, El Toro</strong> e <strong>Leonie</strong>.</p>
+          <p>Modos de jogo: História, VS IA (fácil, médio e difícil) e VS 2 Jogadores (local).</p>
+          <p class="small-note">Vença lutas contra a IA ou no modo História para ganhar pontos e entrar no ranking exibido no telão do ringue durante a partida.</p>
+        </div>
+      </div>
+      <button class="pixel-btn back-btn panel-back-btn" data-goto="main">VOLTAR</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="game/js/data.js"></script>
+<script src="game/js/input.js"></script>
+<script src="game/js/sfx.js"></script>
+<script src="game/js/music.js"></script>
+<script src="game/js/ranking.js"></script>
+<script src="game/js/stage.js"></script>
+<script src="game/js/fighter.js"></script>
+<script src="game/js/main.js"></script>
+</body>
+</html>

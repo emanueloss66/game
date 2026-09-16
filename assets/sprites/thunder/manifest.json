@@ -1,0 +1,141 @@
+{
+  "idle": {
+    "file": "assets/sprites/thunder/idle.png",
+    "frameWidth": 423,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "walk": {
+    "file": "assets/sprites/thunder/walk.png",
+    "frameWidth": 305,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "crouch": {
+    "file": "assets/sprites/thunder/crouch.png",
+    "frameWidth": 395,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "block": {
+    "file": "assets/sprites/thunder/block.png",
+    "frameWidth": 255,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "ko": {
+    "file": "assets/sprites/thunder/ko.png",
+    "frameWidth": 273,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "hit_horizontal": {
+    "file": "assets/sprites/thunder/hit_horizontal.png",
+    "frameWidth": 239,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "hit_vertical": {
+    "file": "assets/sprites/thunder/hit_vertical.png",
+    "frameWidth": 385,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "jump": {
+    "file": "assets/sprites/thunder/jump.png",
+    "frameWidth": 313,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_horizontal": {
+    "file": "assets/sprites/thunder/punch_horizontal.png",
+    "frameWidth": 425,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_vertical": {
+    "file": "assets/sprites/thunder/punch_vertical.png",
+    "frameWidth": 295,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "idle": {
+    "file": "assets/sprites/leonie/idle.png",
+    "frameWidth": 339,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "walk": {
+    "file": "assets/sprites/leonie/walk.png",
+    "frameWidth": 319,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "crouch": {
+    "file": "assets/sprites/leonie/crouch.png",
+    "frameWidth": 339,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "block": {
+    "file": "assets/sprites/leonie/block.png",
+    "frameWidth": 289,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "ko": {
+    "file": "assets/sprites/leonie/ko.png",
+    "frameWidth": 351,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "hit_horizontal": {
+    "file": "assets/sprites/leonie/hit_horizontal.png",
+    "frameWidth": 291,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "hit_vertical": {
+    "file": "assets/sprites/leonie/hit_vertical.png",
+    "frameWidth": 337,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "jump": {
+    "file": "assets/sprites/leonie/jump.png",
+    "frameWidth": 497,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_horizontal": {
+    "file": "assets/sprites/leonie/punch_horizontal.png",
+    "frameWidth": 353,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_vertical": {
+    "file": "assets/sprites/leonie/punch_vertical.png",
+    "frameWidth": 319,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}

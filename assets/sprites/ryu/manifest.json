@@ -1,0 +1,140 @@
+{
+  "idle": {
+    "file": "assets/sprites/ryu/idle.png",
+    "frameWidth": 280,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "walk": {
+    "file": "assets/sprites/ryu/walk.png",
+    "frameWidth": 299,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "crouch": {
+    "file": "assets/sprites/ryu/crouch.png",
+    "frameWidth": 317,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "block": {
+    "file": "assets/sprites/ryu/block.png",
+    "frameWidth": 299,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "ko": {
+    "file": "assets/sprites/ryu/ko.png",
+    "frameWidth": 303,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "hit_horizontal": {
+    "file": "assets/sprites/ryu/hit_horizontal.png",
+    "frameWidth": 317,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "hit_vertical": {
+    "file": "assets/sprites/ryu/hit_vertical.png",
+    "frameWidth": 331,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "jump": {
+    "file": "assets/sprites/ryu/jump.png",
+    "frameWidth": 307,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_horizontal": {
+    "file": "assets/sprites/ryu/punch_horizontal.png",
+    "frameWidth": 407,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_vertical": {
+    "file": "assets/sprites/ryu/punch_vertical.png",
+    "frameWidth": 479,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}

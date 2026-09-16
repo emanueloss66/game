@@ -1,0 +1,141 @@
+{
+  "idle": {
+    "file": "assets/sprites/ivan/idle.png",
+    "frameWidth": 351,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "walk": {
+    "file": "assets/sprites/ivan/walk.png",
+    "frameWidth": 369,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "crouch": {
+    "file": "assets/sprites/ivan/crouch.png",
+    "frameWidth": 307,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "block": {
+    "file": "assets/sprites/ivan/block.png",
+    "frameWidth": 281,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "ko": {
+    "file": "assets/sprites/ivan/ko.png",
+    "frameWidth": 319,
+    "frameHeight": 360,
+    "frameCount": 7,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "hit_horizontal": {
+    "file": "assets/sprites/ivan/hit_horizontal.png",
+    "frameWidth": 487,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "hit_vertical": {
+    "file": "assets/sprites/ivan/hit_vertical.png",
+    "frameWidth": 523,
+    "frameHeight": 360,
+    "frameCount": 2,
+    "durations": [
+      100,
+      100
+    ]
+  },
+  "jump": {
+    "file": "assets/sprites/ivan/jump.png",
+    "frameWidth": 411,
+    "frameHeight": 360,
+    "frameCount": 11,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_horizontal": {
+    "file": "assets/sprites/ivan/punch_horizontal.png",
+    "frameWidth": 417,
+    "frameHeight": 360,
+    "frameCount": 5,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "punch_vertical": {
+    "file": "assets/sprites/ivan/punch_vertical.png",
+    "frameWidth": 473,
+    "frameHeight": 360,
+    "frameCount": 6,
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  }
+}

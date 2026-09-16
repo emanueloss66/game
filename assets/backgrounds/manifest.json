@@ -1,0 +1,12 @@
+{
+  "frames": [
+    "assets/backgrounds/stage_0.png",
+    "assets/backgrounds/stage_1.png"
+  ],
+  "width": 1536,
+  "height": 1024,
+  "durations": [
+    100,
+    100
+  ]
+}
